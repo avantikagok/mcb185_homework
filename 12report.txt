@@ -1,0 +1,14 @@
+Thu Jan 18 19:04:24 PST 2024
+USER: davisavantika
+HOME: /Users/davisavantika
+SHELL: /bin/zsh
+PWD: /Users/davisavantika/Code/mcb185_homework
+PATH: /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin
+Darwin Avantikas-MacBook-Air-2.local 21.6.0 Darwin Kernel Version 21.6.0: Mon Dec 19 20:44:01 PST 2022; root:xnu-8020.240.18~2/RELEASE_X86_64 x86_64
+Python 3.9.2
+/Users/davisavantika/Code
+/Users/davisavantika/Code/mcb185_homework
+/Users/davisavantika/Code/mcb185_homework/.git
+/Users/davisavantika/Code/MCB185
+/Users/davisavantika/Code/MCB185/.git
+/Users/davisavantika/Code/MCB185/data
