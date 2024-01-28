@@ -65,10 +65,10 @@ def hydrophobicityval(letter):
 		
 		
 value = hydrophobicityval('K')
-print (value)
+print(value)
 
 value = hydrophobicityval('B')
-print (value)
+print(value)
 
 value = hydrophobicityval('V')
-print (value)
+print(value)

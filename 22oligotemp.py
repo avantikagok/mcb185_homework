@@ -1,5 +1,3 @@
-
-
 def tm(A, C, G, T):
 	oligolen = A + C + G + T
 	if oligolen <= 13:
