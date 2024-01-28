@@ -14,11 +14,11 @@ def quadratic (a, b, c):
 
 
 x1, x2, solnum = quadratic (5, -7, 14)
-print (x1, x2, solnum)
+print(x1, x2, solnum)
 
 x1, x2, solnum = quadratic (1, -7, -3)
-print (x1, x2, solnum)
+print(x1, x2, solnum)
 
 x1, x2, solnum = quadratic (1, 2, 1)
-print (x1, x2, solnum)
+print(x1, x2, solnum)
 
