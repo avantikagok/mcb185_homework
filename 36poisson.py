@@ -9,11 +9,11 @@ def factorial(z):
 
 def poissonprob(k, n):
 	prob = ((n ** k) * (math.e ** (-1 * n)) / factorial(k))
-	print(prob)
+	print("The Poisson probability of", k, "events occurring with an expectation of", n, "is", prob)
 	
 poissonprob(15, 3)
 poissonprob(4, 4)
-poissonprob(234, 237)
+poissonprob(37, 57)
 
 
 

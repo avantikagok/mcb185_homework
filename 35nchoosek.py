@@ -9,8 +9,9 @@ def factorial(z):
 def nchoosek(n, k):
 	assert n >= k
 	ans = factorial(n) / (factorial(k) * factorial(n - k))
-	print(ans)
-	
+	print(n, "choose", k, "is", ans)
+
+
 nchoosek(10, 4)
 nchoosek(28, 6)
 nchoosek(50, 46)
