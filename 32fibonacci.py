@@ -11,5 +11,4 @@ def fibonacci():
 		f1 = fnext
 		count = count + 1
 		
-		
 fibonacci()

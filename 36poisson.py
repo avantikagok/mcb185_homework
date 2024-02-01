@@ -14,7 +14,3 @@ def poissonprob(k, n):
 poissonprob(15, 3)
 poissonprob(4, 4)
 poissonprob(37, 57)
-
-
-
-#what is the overflow error for the last example?
