@@ -1,12 +1,11 @@
-def scoringmatrix():
-	nts = 'ACGT'
+def scoringmatrix(nts):
+	# Print first line
 	print('   ', end='')
 	for nt1 in nts:
-		if nt1 != 'T': 
-			print(nt1, end=('  '))
-		else:
-			print(nt1)
-
+		print(nt1, end=('  '))
+	print()
+	
+	#Print individual lines
 	for nt2 in nts:	
 		print(nt2, end=' ')
 		for nt1 in nts:
@@ -16,4 +15,6 @@ def scoringmatrix():
 				print('-1', end=' ')
 		print('')
 
-scoringmatrix()
+scoringmatrix('ACGT')
+scoringmatrix('ACGTNSLKDFJSKDJ')
+

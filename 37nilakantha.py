@@ -1,9 +1,9 @@
-def nilakanthaseries():
+def nilakanthaseries(limit):
 	ninitial = 2
 	nmiddle = 3
 	nfinal = 4
-	total = 0
-	for termnumber in range(1, 500):
+	total = 3
+	for termnumber in range(1, limit + 1):
 		if termnumber % 2 == 0:
 			sign = -1 
 		else:
@@ -13,7 +13,6 @@ def nilakanthaseries():
 		nmiddle = ninitial + 1
 		nfinal = ninitial + 2
 		termnumber = termnumber + 1
-	total = total + 3
 	print(total)
 	
-nilakanthaseries()
+nilakanthaseries(500)
