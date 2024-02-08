@@ -28,17 +28,14 @@ def nilakanthaseries(limit):
 
 
 def gregleib(limit):
-	total = 1
+	total = 1 
 	sign = -1
-	i = 3
 	realpi = 0
-	for i in range(3, limit, 2):
+	for i in range(3, limit * 2 + 5, 2):
 		total = total + sign * (1 / i)
 		sign = sign * -1
-		realpi = total * 4
+		realpi = total * 4		
 	return(realpi)
-	
 
-
-for i in range(1,101):
-	print(nilakanthaseries(i), gregleib(i))
+for i in range(1,100):
+	print(nilakanthaseries(i), gregleib(i))	
