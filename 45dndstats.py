@@ -58,9 +58,11 @@ def averagescores(limit):
 		totalx2 += x2newval
 		d1newval = diff4d6d1()
 		totald1 += d1newval
-	print(f'3D6 average: {totalnormal / limit}, 3D6r1 average: {totalr1 / limit}, 3d6x2 average: {totalx2 / limit}, 4D6d1 average: {totald1 / limit}')
+	print(f'3D6 average: {totalnormal / limit}')
+	print(f'3D6r1 average: {totalr1 / limit}')
+	print(f'3d6x2 average: {totalx2 / limit}') 
+	print(f'4D6d1 average: {totald1 / limit}')
 	
 
 
 averagescores(10000)
-# how do you do this without making them functions

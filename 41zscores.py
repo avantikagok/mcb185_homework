@@ -9,7 +9,7 @@ z2 = 0
 z3 = 0
 
 totalcount = 22030
-for i in range (totalcount):
+for i in range(totalcount):
 	val = random.gauss(0.0, 1.0)
 	if abs(zscore(val)) <= 1:
 		z1 = z1 + 1

@@ -40,7 +40,9 @@ for i in range(1, 10001):
 	if trial == 'revived':
 		revivecount += 1
 		
-print(f'Death prob = {deathcount / 10000}, Stable prob = {stablecount / 10000}, Revive prob = {revivecount / 10000}')
+print(f'Death prob = {deathcount / 10000}')
+print(f'Stable prob = {stablecount / 10000}')
+print(f'Revive prob = {revivecount / 10000}')
 	
 
 		
