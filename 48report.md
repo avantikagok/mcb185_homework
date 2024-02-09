@@ -7,11 +7,11 @@
 
 ## output of 46savingthrows.py ##
 
- Normal |	Adv	| Disadv
-DC 5	| 0.7988 | 0.9598 | 0.627
-DC 10 |	0.5608	| 0.7974 |	0.2976
-DC 15 | 	0.3156 | 	0.511	| 0.0911
-
+| Danger Level      |  Normal| Adv	  | Disadv
+| DC 5	| 0.7988 | 0.9598 | 0.627
+| DC 10 | 0.5608 | 0.7974 |	0.2976
+| DC 15 | 0.3156 | 0.511  | 0.0911
+ 
 
 ## output of 47deathsaves.py ##
 
