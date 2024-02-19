@@ -46,6 +46,17 @@ def median(somelist):
 	else:
 		median = somelist[median1]
 	return int(median)
+	
+def elementsperchromosome(feature, chromosome):
+	count = 0
+	with gzip.open(gffpath, 'rt') as fp:
+		for line in fp:
+			if line[0] != '#': 
+				words = line.split()
+				if words[2] == feature and words[0] == chromosome:	
+					count += 1
+	print(count)
+
 
 min, max = minmax(lengthstrial)
 print('Minimum:', min, 'Maximum:', max)
@@ -54,4 +65,13 @@ print('Mean:', mean)
 print('Standard Deviation', std)
 medval = median(lengthstrial)
 print('Median:', medval)
+
+
+elementsperchromosome('CDS', '2L')
+elementsperchromosome('CDS', '3L')
+elementsperchromosome('CDS', '4')
+elementsperchromosome('CDS', 'X')
+elementsperchromosome('CDS', 'Y')
+
+
 
