@@ -67,11 +67,12 @@ medval = median(lengthstrial)
 print('Median:', medval)
 
 
+'''
 elementsperchromosome('CDS', '2L')
 elementsperchromosome('CDS', '3L')
 elementsperchromosome('CDS', '4')
 elementsperchromosome('CDS', 'X')
 elementsperchromosome('CDS', 'Y')
-
+'''
 
 

@@ -2,7 +2,7 @@ seq = 'GAATTC'
 print(seq[0], seq[1], seq[-1])
 
 for i in range(len(seq)):
-    print(i, seq[i])
+	print(i, seq[i])
     
     
 s = 'ABCDEFGHIJ'
@@ -18,9 +18,9 @@ print(tax)
 #tax[0] = 'human'
 
 def quadratic(a, b, c):
-    x1 = (-b + (b**2 - 4*a*c)**0.5) / (2*a)
-    x2 = (-b - (b**2 - 4*a*c)**0.5) / (2*a)
-    return x1, x2
+	x1 = (-b + (b**2 - 4*a*c)**0.5) / (2*a)
+	x2 = (-b - (b**2 - 4*a*c)**0.5) / (2*a)
+	return x1, x2
 
 x1, x2 = quadratic(5, 6, 1)          
 print(x1, x2)                        
@@ -29,20 +29,20 @@ print(intercepts[0], intercepts[1])
 
 nts = 'ACGT'
 for i in range(len(nts)):
-    print(i, nts[i])
+	print(i, nts[i])
     
 for i, nt in enumerate(nts):
-    print(i, nt)
+	print(i, nt)
     
 names = ('adenine', 'cytosine', 'guanine', 'thymine')
 for i in range(len(names)):
-    print(nts[i], names[i])
+	print(nts[i], names[i])
     
 for nt, name in zip(nts, names):
-    print(nt, name)
+	print(nt, name)
     
 for i, (nt, name) in enumerate(zip(nts, names)):
-    print(i, nt, name)
+	print(i, nt, name)
     
 nts = ['A', 'T', 'C']
 print(nts)
@@ -100,3 +100,6 @@ print('index Z?', alph.index('Z'))
 
 print('find G?', alph.find('G'))
 print('find Z?', alph.find('Z'))
+
+def minimum(newlist):
+

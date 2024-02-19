@@ -46,8 +46,7 @@ for trial in range(1, trials + 1):
 		if calendar[month - 1][day - 1][1] >= 2:
 			trialsuccess += 1 
 		
-			
-	#resetting counts in calendar	 
+#resetting counts in calendar	 
 	for i in calendar:
 		for j in i:
 			j[1] = 0

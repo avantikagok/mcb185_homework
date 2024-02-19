@@ -1,4 +1,4 @@
-| Genome         | Type |  N   | Min |  Max  | Mean | Stdv | Med  | Chromosome 1 | Chromosome 2 | Chromosome 3 | Chromosome 4 | Chromosome 5 | Chromosome 6 | Chromosome X | Chromosome Y |
+| Genome         | Type |  N   | Min |  Max  | Mean | Stdv | Med  | Chromosome 1 (number of features per chromosome) | Chromosome 2 | Chromosome 3 | Chromosome 4 | Chromosome 5 | Chromosome 6 | Chromosome X | Chromosome Y |
 |:---------------|:-----|:-----|:----|:------|:-----|:-----|:-----|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|
 | A.thaliana     | gene |  362 |  72 |  9511 | 2070 | 1435 | 1892 | 		  94 | 			 45 |           84 |           55 |           81 |          N/A |          N/A |          N/A |
 |                | exon | 2650 |   6 | 10188 |  290 |  439 |  162 |			 738 |     		388 |     	   617 |          302 |          602 |          N/A |          N/A |          N/A |
