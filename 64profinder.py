@@ -1,3 +1,5 @@
+#Coauthors: Varsha, Anisha, Avantika
+
 import dogma
 import mcb185
 import sys
