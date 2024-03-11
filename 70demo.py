@@ -34,7 +34,7 @@ for nt in seq:
     
 import itertools
 for nts in itertools.product('ACGT', repeat=2):
-    print(nts)
+	print(nts)
     
     
     
