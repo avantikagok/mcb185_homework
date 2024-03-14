@@ -74,4 +74,18 @@ def kdvalues(aa):
 	elif aa == 'N': return -3.5
 	elif aa == 'K': return -3.9
 	elif aa == 'R': return -4.5
-    
+
+def tm(seq):
+	A = seq.count('A')
+	C = seq.count('C')
+	G = seq.count('G')
+	T = seq.count('T')
+	
+	oligolen = A + C + G + T
+	if oligolen <= 13:
+		melttemp = (A + T) * 2 + (G + C) * 4
+		return oligolen, melttemp
+	else:
+		melttemp = 64.9 + 41 * (G + C - 16.4) / (A + C + G + T)
+		return oligolen, melttemp
+		
