@@ -11,8 +11,8 @@ orflen = sys.argv[2]
 
 
 #reference coordinates to compare with
-'''
-with gzip.open(sys.argv[1], 'rt') as fp:
+refcds = []
+with gzip.open(sys.argv[3], 'rt') as fp:
 	for line in fp:
 		if line.startswith('#'): continue
 		f = line.split()
@@ -28,35 +28,78 @@ with gzip.open(sys.argv[1], 'rt') as fp:
 			'beg': beg,
 			'end': end,
 			'strand': s})
-		
+#print(refcds)
 
 
-print(refcds)
-
-'''
 		
 def findcds(seq, minlength, strand):
 	startend = []
 	start = 'ATG'
 	stop = ['TAA', 'TGA', 'TAG']
-	i = 0
-	while i < len(seq) - int(minlength):
+	#stopused = {}
+	
+	for frame in range(3):
+		currentseq = seq[frame:]
+		startindex = 0
+		while startindex < len(seq) - int(minlength):
+			if currentseq[startindex:startindex+3] != 'ATG':
+				startindex += 3
+				continue	
+				
+			for endindex in range(startindex + 3, len(seq), 3):
+				codon = currentseq[endindex:endindex+3]
+				if codon in stop:
+					break	
+			orflength = endindex - startindex + 1
+			
+			if orflength > int(minlength):
+						#if j in stopused: continue
+						if strand == 'positive':
+							startend.append([startindex + frame, endindex + frame + 3 - 1])
+	
+						if strand == 'negative':
+							newstart = len(seq) - (endindex + frame + 3) 
+							newend = len(seq) - startindex + frame - 1
+							startend.append([newstart, newend])
+			startindex = endindex 
+			
+	return startend
+		
+'''
+	while startindex < len(seq) - int(minlength):
+		if seq[startindex:startindex+3] != 'ATG':
+			startindex += 3
+			continue
+		for endindex in range(startindex + 3, len(seq), 3):
+			codon = seq[endindex:endindex+3]
+			if codon in stop:
+				break
+		orflength = endindex - startindex + 1
 		if seq[i:i+3] == start:
 			for j in range(i+3, len(seq) - int(minlength), 3):
 				if seq[j:j+3] in stop:
-					if ((j + 3) - i) > int(minlength):
+					orflength = j + 3 - i
+					if orflength > int(minlength):
+						#if j in stopused: continue
 						if strand == 'positive':
 							startend.append([i, j + 3 - 1])
+							i = j + 3
 							break	
 						if strand == 'negative':
 							newstart = len(seq) - (j + 3) 
 							newend = len(seq) - i - 1
 							startend.append([newstart, newend])
+							i + j + 3
 							break	
-		i += 1
+					else:
+						i += 3
 	#startend = startend.sort()
+	print(len(startend))
 	return startend
-	
+
+
+'''
+
 def output(indexes, defline, strand):
 	for start, end in indexes:
 		print(f"{defline}\t.\tCDS\t{start}\t{end}\t.\t{strand}\t.\t.")
